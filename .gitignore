@@ -24,6 +24,6 @@ dist-ssr
 *.sw?
 
 #전체 constants.js 파일 무시
-constants.js
+#constants.js
 #특정 폴더의 파일만 추적
-!addrfront/src/constants.js
+#!addrfront/src/constants.js
