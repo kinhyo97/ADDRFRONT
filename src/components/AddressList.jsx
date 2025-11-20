@@ -53,6 +53,7 @@ function AddressList(props){
 
   const [open, setOpen] = useState(false)
   const delAddress = (url) => {
+    url = url.replace('http://', 'https://')
     if(window.confirm('정말 삭제할까요?')){
       const jwt = sessionStorage.getItem('jwt')
 
@@ -119,6 +120,7 @@ fetch(url, {
   }
   */
   const editAddress = (url, address) => { //방법2-2: 백엔드 호출'을 부모에서 정의한 경우(axios) 
+    url = url.replace('http://', 'https://')
     const jwt = sessionStorage.getItem('jwt')
 
     axios.put(url,address, {headers:{'Authorization':jwt}})
